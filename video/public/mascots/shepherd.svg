@@ -1,0 +1,41 @@
+<svg  width="400" height="350" viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="gst" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#E2A868"/><stop offset="1" stop-color="#C0813F"/></radialGradient>
+<linearGradient id="gsc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1C590"/><stop offset="1" stop-color="#E0A866"/></linearGradient>
+<linearGradient id="gsb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A3E38"/><stop offset="1" stop-color="#2C2420"/></linearGradient>
+</defs>
+<ellipse cx="200" cy="334" rx="130" ry="12" fill="#5B7A8C" opacity=".14"/>
+<path d="M256 318c46 6 72-16 78-52 2-16 24-18 26 0 6 50-36 82-100 72z" fill="url(#gst)" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M312 300c14-10 22-24 24-42 6-8 20-6 22 6 2 20-12 38-34 46z" fill="url(#gsb)"/>
+<path d="M108 318c-6-18 8-30 26-26 14 3 16 22 4 30-10 6-26 4-30-4z" fill="#C0813F" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M292 318c6-18-8-30-26-26-14 3-16 22-4 30 10 6 26 4 30-4z" fill="#C0813F" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M144 190c-28 26-42 72-36 110 4 22 26 30 52 30h80c26 0 48-8 52-30 6-38-8-84-36-110z" fill="url(#gst)" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M146 194c-22 22-34 56-34 88 12-8 22-30 30-56 6-14 14-24 24-30z" fill="url(#gsb)"/>
+<path d="M254 194c22 22 34 56 34 88-12-8-22-30-30-56-6-14-14-24-24-30z" fill="url(#gsb)"/>
+<path d="M164 198c-14 30-14 72 6 100 14 20 46 20 60 0 20-28 20-70 6-100z" fill="url(#gsc)"/>
+<path d="M166 262c-2 26-2 48 2 64 4 8 26 8 28 0 2-16 2-38 0-64z" fill="#E6B377" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M234 262c2 26 2 48-2 64-4 8-26 8-28 0-2-16-2-38 0-64z" fill="#E6B377" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M176 326v-8M186 326v-8M214 326v-8M224 326v-8" stroke="#6B4A33" stroke-width="3" stroke-linecap="round"/>
+<path d="M156 222c30 18 58 18 88 0" fill="none" stroke="#5F86A0" stroke-width="12" stroke-linecap="round"/>
+<circle cx="200" cy="246" r="10" fill="#E6CF86" stroke="#6B4A33" stroke-width="3"/>
+<path d="M130 118c-14-40-12-80 0-104 4-6 10-6 14-2 24 22 40 52 44 76z" fill="url(#gsb)" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M142 100c-6-26-6-50 2-68 14 16 24 36 28 52z" fill="#D9A06A"/>
+<path d="M270 118c14-40 12-80 0-104-4-6-10-6-14-2-24 22-40 52-44 76z" fill="url(#gsb)" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M258 100c6-26 6-50-2-68-14 16-24 36-28 52z" fill="#D9A06A"/>
+<path d="M200 66c52 0 88 34 88 76 0 22-12 40-30 52-10 20-30 32-58 32s-48-12-58-32c-18-12-30-30-30-52 0-42 36-76 88-76z" fill="url(#gst)" stroke="#6B4A33" stroke-width="4" stroke-linejoin="round"/>
+<path d="M200 70c-6 14-10 30-12 44 4 0 8 2 12 6 4-4 8-6 12-6-2-14-6-30-12-44z" fill="#3A302B"/>
+<path d="M200 118c-16 10-34 30-38 54-4 24 14 50 38 52 24-2 42-28 38-52-4-24-22-44-38-54z" fill="url(#gsb)"/>
+<path d="M176 196c6 16 14 24 24 24s18-8 24-24c-8 4-16 6-24 6s-16-2-24-6z" fill="#D9A06A"/>
+<ellipse cx="160" cy="120" rx="9" ry="5" fill="#F1C590"/>
+<ellipse cx="240" cy="120" rx="9" ry="5" fill="#F1C590"/>
+<ellipse cx="163" cy="142" rx="11" ry="13" fill="#3A2416"/>
+<ellipse cx="237" cy="142" rx="11" ry="13" fill="#3A2416"/>
+<circle cx="167" cy="136" r="4.2" fill="#FFFFFF"/><circle cx="159" cy="148" r="1.8" fill="#FFFFFF"/>
+<circle cx="241" cy="136" r="4.2" fill="#FFFFFF"/><circle cx="233" cy="148" r="1.8" fill="#FFFFFF"/>
+<ellipse cx="146" cy="172" rx="13" ry="8" fill="#F49A8C" opacity=".4"/>
+<ellipse cx="254" cy="172" rx="13" ry="8" fill="#F49A8C" opacity=".4"/>
+<path d="M185 176c0-8 30-8 30 0 0 9-9 15-15 15s-15-6-15-15z" fill="#15110F"/>
+<ellipse cx="194" cy="175" rx="5" ry="2.4" fill="#FFFFFF" opacity=".4"/>
+<path d="M193 206c0 16 14 16 14 0z" fill="#F08A8A" stroke="#6B4A33" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M200 191c0 9-7 14-15 11M200 191c0 9 7 14 15 11" fill="none" stroke="#F1C590" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

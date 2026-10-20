@@ -1,0 +1,23 @@
+probe click-camera.mp3         cue from f404  audible start   405.29f (lag +1.29f)  peak lands   411.14f vs target f411  err +0.14f
+probe switch-click-quick.mp3   cue from f1036  audible start  1037.27f (lag +1.27f)  peak lands  1037.57f vs target f1038  err -0.43f
+probe transition-snap.mp3      cue from f245  audible start   246.29f (lag +1.29f)  peak lands   249.74f vs target f250  err -0.26f
+probe impact-deep-whoosh.mp3   cue from f1312  audible start  1320.23f (lag +8.23f)  peak lands  1336.88f vs target f1330  err +6.88f
+output lag mean +3.02f  spread 6.96f
+render grid: BPM 122.01  t0 3.9905s (design FILM_BEAT0 0.0563s)
+beat   8 cut f  120  nearest transient   119.68f  err -0.32f  OK
+beat  20 cut f  297  nearest transient   296.64f  err -0.36f  OK
+beat  30 cut f  444  nearest transient   444.16f  err +0.16f  OK
+beat  42 cut f  621  nearest transient   621.12f  err +0.12f  OK
+beat  46 cut f  680  nearest transient   680.32f  err +0.32f  OK
+beat  56 cut f  828  nearest transient   827.84f  err -0.16f  OK
+beat  63 cut f  931  nearest transient   930.88f  err -0.12f  OK
+beat  67 cut f  990  nearest transient   989.76f  err -0.24f  OK
+beat  76 cut f 1123  nearest transient  1122.88f  err -0.12f  OK
+beat  86 cut f 1271  nearest transient  1270.40f  err -0.60f  OK
+beat  90 cut f 1330  nearest transient  1329.60f  err -0.40f  OK
+max |err| 0.60f  mean -0.16f
+
+NOTE: the impact-deep-whoosh correlation probe above is unreliable — its first 250ms is a quiet swell and the
+riser overlaps the same window, so the correlator locks onto the wrong offset (that also inflates "output lag
+mean"). Direct measurement on render-nobgm.wav: per-frame RMS around the slam peaks at f1329–1332 (target
+f1330). The three clean probes (click / switch / snap) give the true output lag: +1.27–1.29f, compensated.
