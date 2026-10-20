@@ -1,0 +1,33 @@
+{
+ "candidates": {
+  "0.5x": {
+   "T": 0.9835909274941642,
+   "t0": 0.06690466725772193,
+   "match": 0.9646017699115044,
+   "mean_abs_ms": 5.889493488198679,
+   "drift_ms_total": 4.145849422763806,
+   "first_beat_on_attack": true,
+   "kick_on_off_ratio": 1.1510484038428528
+  },
+  "1x": {
+   "T": 0.4917954637470821,
+   "t0": 0.0669046672577211,
+   "match": 0.9646017699115044,
+   "mean_abs_ms": 6.857943256671487,
+   "drift_ms_total": 0.9553239425823334,
+   "first_beat_on_attack": true,
+   "kick_on_off_ratio": 2.0863135777550235
+  },
+  "2x": {
+   "T": 0.24589773187354105,
+   "t0": 0.06690466725772778,
+   "match": 0.9183222958057395,
+   "mean_abs_ms": 5.948143030662131,
+   "drift_ms_total": 3.6380546463690764,
+   "first_beat_on_attack": true,
+   "kick_on_off_ratio": 2.9378306841144415
+  }
+ },
+ "winner": "1x",
+ "reason": "1x: highest kick on/off-beat ratio among grids with match>=0.9 (kicks sit on integer beats)"
+}

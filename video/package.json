@@ -1,0 +1,24 @@
+{
+  "name": "walk-promo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts WalkPromo out/promo.mp4",
+    "render:nobgm": "remotion render src/index.ts WalkPromo out/promo-nobgm.mp4 --props=props-nobgm.json",
+    "still": "remotion still src/index.ts WalkPromo",
+    "capture": "node scripts/capture.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.484",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "remotion": "4.0.484"
+  },
+  "devDependencies": {
+    "@remotion/google-fonts": "4.0.484",
+    "@types/react": "19.2.17",
+    "puppeteer": "^24.43.1",
+    "typescript": "6.0.3"
+  }
+}
