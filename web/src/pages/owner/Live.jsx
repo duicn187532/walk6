@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useSession, useData, when, endTime, utcClock, petEmoji } from '../../lib.jsx';
-import { api } from '../../api.js';
+import { api, assetUrl } from '../../api.js';
 import { Card, Icon, PageHead, SectionHead, StatusBadge, PetAvatar, Avatar, Empty } from '../../components/ui.jsx';
 import WalkMap from '../../components/WalkMap.jsx';
 
@@ -57,7 +57,7 @@ export default function OwnerLive() {
               <span>{b.status === 'open' ? '公開任務徵求中，遛狗者接單後會通知你。' : b.status === 'requested' ? `等待 ${b.walker?.name} 確認接單。` : b.status === 'accepted' ? `${b.walker?.name} 已確認，${when(b.start_at)} 交接後會開始即時追蹤。` : '這趟散步已結束。'}</span>
             </div>
           )}
-          {photos.length > 0 && (<><div className="divider" /><b className="small">📷 照片回報</b><div className="photo-grid mt-s">{photos.map((u) => <img key={u.id} src={u.photo_url} alt={u.ai_label || '散步照片'} title={u.ai_label || ''} />)}</div></>)}
+          {photos.length > 0 && (<><div className="divider" /><b className="small">📷 照片回報</b><div className="photo-grid mt-s">{photos.map((u) => <img key={u.id} src={assetUrl(u.photo_url)} alt={u.ai_label || '散步照片'} title={u.ai_label || ''} />)}</div></>)}
         </Card>
 
         <div className="stack">
@@ -93,7 +93,7 @@ export function Timeline({ updates }) {
           <div className="tl-body">
             <time>{utcClock(u.at)}</time>{u.ai_label && <span className={`chip ${u.ai_flag ? 'red' : 'green'}`} style={{ marginLeft: 8 }}>🤖 {u.ai_label}</span>}
             <p>{u.text}</p>
-            {u.photo_url && <img src={u.photo_url} alt={u.ai_label || '照片'} />}
+            {u.photo_url && <img src={assetUrl(u.photo_url)} alt={u.ai_label || '照片'} />}
           </div>
         </div>
       ))}

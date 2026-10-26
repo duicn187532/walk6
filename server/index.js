@@ -18,6 +18,11 @@ run("UPDATE walk_updates SET kind = text, text = kind WHERE text IN ('system','a
 run('UPDATE users SET password_hash = ? WHERE password_hash IS NULL', hashPassword(DEMO_PASSWORD));
 
 const app = express();
+// The shared ngrok gateway forwards https://<domain>/walk/… here; strip the prefix so every route also works at the root.
+app.use((req, _res, next) => {
+  if (/^\/walk(?=[/?]|$)/.test(req.url)) req.url = '/' + req.url.slice(5).replace(/^\//, '');
+  next();
+});
 app.use(express.json({ limit: '2mb' }));
 app.use('/uploads', express.static(UPLOAD_DIR));
 const upload = multer({

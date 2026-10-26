@@ -39,8 +39,8 @@ where ngrok >nul 2>nul
 if errorlevel 1 (
   echo  [!] 找不到 ngrok，只啟動本機版：http://localhost:4100
 ) else (
-  echo  [4/4] 啟動 ngrok 對外分享（連結會顯示在新視窗，也會存到 share-links.txt）...
-  start "Walk-Tunnel" cmd /k "chcp 65001>nul && npm run tunnel"
+  echo  [4/4] 透過共用 ngrok（與彤靈同一個網域，Walk 在 /walk）對外分享...
+  call npm run tunnel
 )
 
 start "" "http://localhost:4100/owner?as=A"
@@ -50,4 +50,4 @@ echo    體驗者 A（小晴）   http://localhost:4100/owner?as=A
 echo    體驗者 B（林以安） http://localhost:4100/walker?as=B
 echo  要關閉全部服務，請執行 stop-walk.bat
 echo.
-ping -n 9 127.0.0.1 >nul
+pause
