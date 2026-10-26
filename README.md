@@ -20,16 +20,15 @@ npm run dev
 
 ### 一鍵啟動與對外分享（Windows）
 
-雙擊 **`start-walk.bat`**：自動安裝套件 → 建置 → 開啟「Walk-Server」與「Walk-Tunnel」兩個視窗。
-ngrok 連結會顯示在 Walk-Tunnel 視窗並存到 `share-links.txt`，兩位體驗者各用一個：
+雙擊 **`start-walk.bat`**：自動安裝套件 → 建置 → 開啟「Walk-Server」視窗，並透過共用 ngrok 閘道（`../shared-ngrok`，與彤靈共用同一個網域；Walk 在 `/walk`，彤靈在根路徑）對外分享。
+ngrok 連結會顯示在啟動器視窗並存到 `share-links.txt`，兩位體驗者各用一個：
 
 | 連結 | 身分 |
 |---|---|
-| `https://<ngrok 網域>/owner?as=A` | 體驗者 A：小晴（飼主兼遛狗者） |
-| `https://<ngrok 網域>/walker?as=B` | 體驗者 B：林以安（遛狗者兼飼主） |
+| `https://<ngrok 網域>/walk/owner?as=A` | 體驗者 A：小晴（飼主兼遛狗者） |
+| `https://<ngrok 網域>/walk/walker?as=B` | 體驗者 B：林以安（遛狗者兼飼主） |
 
-雙擊 **`stop-walk.bat`** 停止（只關本專案的程序，不會關到其他專案的 ngrok）。
-免費 ngrok 帳號只有一個網域；若被其他專案佔用，把另一個帳號的 authtoken 或保留網域填進 `.env.ngrok`（範本：`.env.ngrok.example`）。
+雙擊 **`stop-walk.bat`** 停止伺服器（共用的 ngrok 不會被關掉，彤靈仍可使用；要停止對外分享請關掉「Shared ngrok Gateway」視窗）。
 
 **自行註冊**：沒登入時會看到註冊／登入頁，用 Email＋密碼（至少 6 碼）建立帳號，可選「找人遛狗／當遛狗者／兩個都要」；選遛狗者會自動建立預設信任履歷。密碼以 scrypt 雜湊存放。示範帳號（如 `qing@example.com`）的密碼都是 `walk1234`，登入頁也有一鍵體驗按鈕；`?as=A`／`?as=B` 連結仍會直接登入兩位體驗者。⚠ 「重置模擬資料」會清除所有自行註冊的帳號。
 

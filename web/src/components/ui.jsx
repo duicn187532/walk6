@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { STATUS, petEmoji } from '../lib.jsx';
+import { assetUrl } from '../api.js';
 
 const PATHS = {
   home: <><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" /><path d="M9 21v-8h6v8" /></>,
@@ -44,7 +45,7 @@ export function PageHead({ eyebrow, title, sub, children }) {
 export function PetAvatar({ pet, size = 52 }) {
   return (
     <div className="pet-avatar" style={{ width: size, height: size, fontSize: size * 0.55 }}>
-      {pet?.photo_url ? <img src={pet.photo_url} alt={pet.name} /> : petEmoji(pet)}
+      {pet?.photo_url ? <img src={assetUrl(pet.photo_url)} alt={pet.name} /> : petEmoji(pet)}
     </div>
   );
 }

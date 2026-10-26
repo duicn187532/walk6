@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSession, useData, petAge } from '../../lib.jsx';
-import { api } from '../../api.js';
+import { api, assetUrl } from '../../api.js';
 import { Card, Icon, PageHead, SectionHead, PetAvatar } from '../../components/ui.jsx';
 
 const BLANK = { name: '', type: '犬', breed: '', birth: '', sex: '公', neuter: '已結紮', weight: '', chip_last4: '', vaccine: '已依建議接種', energy: '活潑好動', social: '可友善互動', leash: '一般牽繩', intro: '', medical: '', emergency: '', clinic: '' };
@@ -87,7 +87,7 @@ export default function OwnerPets() {
             <label className="field"><span>常去醫院</span><input value={form.clinic || ''} onChange={set('clinic')} /></label>
             <label className="upload span2">
               <input type="file" accept="image/*" onChange={(e) => setPhoto(e.target.files?.[0] || null)} />
-              {photo ? <img src={URL.createObjectURL(photo)} alt="預覽" /> : form.photo_url ? <img src={form.photo_url} alt={form.name} /> : <div style={{ fontSize: 30 }}>📷</div>}
+              {photo ? <img src={URL.createObjectURL(photo)} alt="預覽" /> : form.photo_url ? <img src={assetUrl(form.photo_url)} alt={form.name} /> : <div style={{ fontSize: 30 }}>📷</div>}
               <div className="small strong mt-s">{photo ? photo.name : '上傳毛孩照片（選填）'}</div>
             </label>
             <div className="span2 row">
